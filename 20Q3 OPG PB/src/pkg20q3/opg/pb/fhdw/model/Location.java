@@ -43,4 +43,12 @@ public class Location{
                 + zip + " city: " 
                 + city;
     }
+    
+    public boolean equals(Location location){
+        if(this == location){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
