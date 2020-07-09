@@ -27,6 +27,7 @@ public class StudentCtr {
                         LocationCtr.runEditDialogue(student.getLoaction());
                         break;
                     case "New residance":
+                        //Hier wird der setLocation mit der Methode runNewDialogue() aufgerufen
                         student.setLocation(LocationCtr.runNewDialogue());
                         break;
                     case "Exit":
