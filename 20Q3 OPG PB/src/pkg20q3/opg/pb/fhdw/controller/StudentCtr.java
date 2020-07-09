@@ -18,10 +18,13 @@ public class StudentCtr {
     public static void runEditDialogue(Student student){
         if(student != null){
             for(boolean goOn = true; goOn;){
-                String choice = Console.readChoice("Edit name", "Edit residance", "New residance", "Exit");
+                String choice = Console.readChoice("Edit name", 
+                        "Edit residance", 
+                        "New residance", 
+                        "Exit");
                 switch (choice){
                     case "Edit name":
-                        student.setName(Console.readString("Ender name"));
+                        student.setName(Console.readString("Enter name"));
                         break;
                     case "Edit residance":
                         LocationCtr.runEditDialogue(student.getLoaction());
@@ -52,7 +55,10 @@ public class StudentCtr {
                         Console.printlnErrorMessage("No Studnet available");
                     }
                     
-                    String choice = Console.readChoice("New Student", "Edit Student", "Remove Student", "Exit");
+                    String choice = Console.readChoice("New Student", 
+                            "Edit Student", 
+                            "Remove Student", 
+                            "Exit");
                     switch(choice){
                         case "New Student":
                             student = runNewDialogue();
