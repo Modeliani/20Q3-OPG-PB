@@ -7,22 +7,24 @@ public class Student {
     //static variables
     public static final int FIRST_ID = 100001;
     public static final int LAST_ID  = 999999;
-    private static int nextId = FIRST_ID;
-    private int id;
-    private String name;
-    private Location residence;
+    private static int      nextId = FIRST_ID;
+    private        int      id;
+    private        String   name;
+    private        Location residence;
+    private        Subject  subject;
     
-    
-    public Student(String name, Location residence){
+    public Student(String name, Location residence, Subject subject){
         this.name = name;
         this.id = getNextId();
         this.residence = residence;
+        this.subject = subject;
     }
      
-    public Student(String firstname, String lastName, Location residence){
+    public Student(String firstname, String lastName, Location residence, Subject subject){
         setName(firstname, lastName);
         this.id = getNextId();
         this.residence = residence;
+        this.subject = subject;
     }
     
     private int getNextId(){
@@ -69,6 +71,14 @@ public class Student {
         this.residence = residence;
     }
     
+    public Subject getSubject(){
+        return subject;
+    }
+    
+    public void setSubject(Subject subject){
+        this.subject = subject;
+    }
+    
     public boolean equals(Student student){
         if(this.id == student.getId()){
             return true;
@@ -78,6 +88,9 @@ public class Student {
     }
     
     public String toString(){
-        return "name: " + name + " id: " + id + " residence: " + residence.toString();
+        return "name: " + name + 
+               " id: " + id + 
+               " residence: " + residence.toString() +
+               " subject: " + subject.toString();
     }
 }

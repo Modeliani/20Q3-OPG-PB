@@ -10,8 +10,18 @@ public class StudentCtr {
         Console.startDialogueSection();
         String name = Console.readString("Enter name");
         Location residance = LocationCtr.runNewDialogue();
-        Student student = new Student(name, residance);
+        
+        Subject [] subjectSet = Subject.values();
+        for(int i = 0; i < subjectSet.length; i++){
+            Console.printlnMessage("(" + i + ")" + subjectSet[i].toString());
+        }
+        int SubjectNumber = Console.readInt("Enter Subject Number");
+        Subject subject = Subject.getSubject(SubjectNumber);
+        Console.printMessage(subject.toString());
+        Student student = new Student(name, residance, subject);
+        
         Console.concludeDialogueSection();
+        
         return student;
     }
     
