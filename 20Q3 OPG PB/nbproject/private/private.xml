@@ -4,9 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/DemoArray.java</file>
-            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/controller/StudentSetCtr.java</file>
-            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/ArrayDemo.java</file>
-            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/controller/LocationCtr.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/DemoEnum.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/model/Subject.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/apps/StudentApp.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/DemoLastVar.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/StringDemo.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/model/Student.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/demo/MathDemo.java</file>
+            <file>file:/C:/Users/Florian/Documents/NetBeansProjects/20Q3-OPG-PB/20Q3%20OPG%20PB/src/pkg20q3/opg/pb/fhdw/controller/StudentCtr.java</file>
         </group>
     </open-files>
 </project-private>
