@@ -23,7 +23,7 @@ public class Person {
         return residence;
     }
     
-    public void setName(Location residence){
+    public void setLocation(Location residence){
         this.residence = residence;
     }
     
