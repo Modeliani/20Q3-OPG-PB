@@ -2,28 +2,24 @@
 package pkg20q3.opg.pb.fhdw.model;
 
 
-public class Student {
+public class Student extends Person {
     
     //static variables
     public static final int FIRST_ID = 100001;
     public static final int LAST_ID  = 999999;
     private static int      nextId = FIRST_ID;
     private        int      id;
-    private        String   name;
-    private        Location residence;
     private        Subject  subject;
     
     public Student(String name, Location residence, Subject subject){
-        this.name = name;
+        super(name, residence);
         this.id = getNextId();
-        this.residence = residence;
         this.subject = subject;
     }
      
     public Student(String firstname, String lastName, Location residence, Subject subject){
-        setName(firstname, lastName);
+        super(firstname + " " + lastName, residence);
         this.id = getNextId();
-        this.residence = residence;
         this.subject = subject;
     }
     
@@ -51,26 +47,6 @@ public class Student {
         this.id = id;
     }
     
-    public String getName(){
-        return name;
-    }
-    
-    public void setName(String name){
-        this.name = name;
-    }
-    
-    public void setName(String firstname, String lastName){
-        setName(firstname + " " + lastName);
-    }
-    
-    public Location getLoaction(){
-        return residence;
-    }
-    
-    public void setLocation(Location residence){
-        this.residence = residence;
-    }
-    
     public Subject getSubject(){
         return subject;
     }
@@ -88,9 +64,8 @@ public class Student {
     }
     
     public String toString(){
-        return "name: " + name + 
+        return super.toString() +
                " id: " + id + 
-               " residence: " + residence.toString() +
                " subject: " + subject.toString();
     }
 }
