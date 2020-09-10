@@ -1,6 +1,8 @@
 
 package pkg20q3.opg.pb.fhdw.model;
 
+import java.util.Objects;
+
 
 public class Student extends Person {
     
@@ -55,12 +57,20 @@ public class Student extends Person {
         this.subject = subject;
     }
     
-    public boolean equals(Student student){
-        if(this.id == student.getId()){
+    public boolean equals(Object obj){
+        /*
+        if(!Objects.equals(student.getId(), this.id)){
+            return false;
+        }
+        if(Objects.equals(student.getName(), super.getName())&&Objects.equals(student.getLocation(), super.getLocation())&&Objects.equals(student.getSubject(), this.getSubject())){
             return true;
         }else{
             return false;
         }
+        */
+        final Person other = (Person) obj;
+        if(!Objects.equals(this.getLocation(), other.getLocation())) return false;
+        return true;
     }
     
     public String toString(){

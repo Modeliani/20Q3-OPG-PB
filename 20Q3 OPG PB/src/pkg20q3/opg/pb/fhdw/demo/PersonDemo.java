@@ -22,5 +22,12 @@ public class PersonDemo {
             student = (Student) person; //Cast
         }
         System.out.println(student);
+        
+        Student student1 = new Student("Test1", new Location("test", 2345, "Stadt"), Subject.BUSNESS_COMPUTER_SCIENCE);
+        Student student2 = new Student("Test1", new Location("test", 2345, "Stadt"), Subject.BUSNESS_COMPUTER_SCIENCE);
+        System.out.println(student1.equals(student2       ) + "\n");
+        System.out.println(student1.equals(student1) + "\n");
+        Object object = new Object();
+        System.out.println(student1.equals(doz1) + "\n");
     }
 }
