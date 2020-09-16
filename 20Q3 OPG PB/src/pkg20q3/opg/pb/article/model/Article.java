@@ -1,6 +1,9 @@
 package pkg20q3.opg.pb.article.model;
 
-public class Article{
+import pkg20q3.opg.pb.article.interfaces.Sellable;
+import pkg20q3.opg.pb.article.interfaces.Storable;
+
+public class Article implements Sellable, Storable{
     // Attribute
     public static final int FIRST_ID = 100001;
     public static final int LAST_ID  = 999999;
@@ -12,9 +15,10 @@ public class Article{
     private        float           salePrice;
     private        StorageLocation storageLocation;
     private        Unit            unit;
+    private        double          amount;
 
     // Konstruktoren
-    public Article(long id, String name, int onStock, float salePrice, StorageLocation storageLocation, Unit unit) {
+    public Article(long id, String name, int onStock, float salePrice, StorageLocation storageLocation, double amount, Unit unit) {
         if (id < FIRST_ID || LAST_ID < id) {
             this.id = getNextId();
         } else {
@@ -24,23 +28,8 @@ public class Article{
         this.onStock = onStock;
         this.salePrice = salePrice;
         this.storageLocation = storageLocation;
+        this.amount = amount;
         this.unit = unit;
-    }
-
-    public Article(long id, String name, float salePrice, StorageLocation storageLocation) {
-        this(id, name, 0, salePrice, storageLocation, Unit.NO_UNIT);
-    }
-
-    public Article(String name, int onStock, float salePrice, StorageLocation storageLocation, Unit unit) {
-        this(getNextId(), name, onStock, salePrice, storageLocation, unit);
-    }
-
-    public Article(String name, int onStock, float salePrice, StorageLocation storageLocation) {
-        this(getNextId(), name, onStock, salePrice, storageLocation, Unit.NO_UNIT);
-    }
-
-    public Article(String name, float salePrice, StorageLocation storageLocation) {
-        this(getNextId(), name, 0, salePrice, storageLocation, Unit.NO_UNIT);
     }
 
     // Methoden
@@ -67,27 +56,29 @@ public class Article{
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getOnStock() {
+    public int getStock(){
         return onStock;
     }
 
-    public void setOnStock(int onStock) {
+    public void setStock(int onStock) {
         this.onStock = onStock;
     }
 
-    public float getSalePrice() {
+    public float getSalesPrice() {
         return salePrice;
     }
 
-    public void setSalePrice(float salePrice) {
+    public void setSalesPrice(float salePrice) {
         this.salePrice = salePrice;
     }
 
@@ -99,6 +90,7 @@ public class Article{
         this.storageLocation = storageLocation;
     }
 
+    @Override
     public Unit getUnit() {
         return unit;
     }
@@ -107,10 +99,20 @@ public class Article{
         this.unit = unit;
     }
 
+    @Override
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+    
+    @Override
+    public double getAmount() {
+        return amount;
+    }
+    
     public boolean equals(Article article) {
         return id == article.id;
     }
-
+    
     @Override
     public String toString() {
         return name
@@ -118,7 +120,9 @@ public class Article{
                + id
                + ") - Bestand="
                + onStock
-               + " "
+               + " zu je "
+               + amount
+               + " in "
                + unit
                + " Stückpreis="
                + salePrice

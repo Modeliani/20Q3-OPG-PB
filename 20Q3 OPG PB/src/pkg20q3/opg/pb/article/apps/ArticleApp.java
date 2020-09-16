@@ -4,6 +4,7 @@ import pkg20q3.opg.pb.article.controller.ArticleCtr;
 import pkg20q3.opg.pb.article.model.Article;
 import pkg20q3.opg.pb.article.model.StorageLocation;
 import pkg20q3.opg.pb.article.utils.Console;
+import pkg20q3.opg.pb.article.model.Unit;
 
 public class ArticleApp {
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class ArticleApp {
         StorageLocation storage1 = new StorageLocation(0, "Primär");
         StorageLocation storage2 = new StorageLocation(1, "Sekundär");
         StorageLocation storage3 = new StorageLocation(0, "Primär: Klon");
+        /*
 
         // toString() and constructor
         Article article1 = new Article("Name", 3.50f, storage1);
@@ -41,5 +43,10 @@ public class ArticleApp {
         Console.printlnMessage("Starting interactive app");
         ArticleCtr.runMainDialogue();
         Console.printlnMessage("Terminating interactive app");
+        */
+        long id = 0;
+        
+        Article article = new Article(id, "Ölfass", 30, 302.5f, storage1, 205.0d, Unit.LITER);
+        System.err.println(article.toString());
     }
 }
